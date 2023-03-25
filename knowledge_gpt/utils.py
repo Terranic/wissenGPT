@@ -1,6 +1,7 @@
 import re
 from io import BytesIO
 from typing import Any, Dict, List
+from typing import List, Union
 
 import docx2txt
 import streamlit as st
@@ -52,7 +53,8 @@ def parse_txt(file: BytesIO) -> str:
 
 
 @st.cache(allow_output_mutation=True)
-def text_to_docs(text: str | List[str]) -> List[Document]:
+#def text_to_docs(text: str | List[str]) -> List[Document]:
+def text_to_docs(text: Union[str, List[str]]) -> List[Document]:    
     """Converts a string or list of strings to a list of Documents
     with metadata."""
     if isinstance(text, str):
