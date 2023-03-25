@@ -18,7 +18,7 @@ from knowledge_gpt.utils import (
 def clear_submit():
     st.session_state["submit"] = False
 
-
+st.session_state["OPENAI_API_KEY"]=st.secrets["OPENAI_API_KEY"]
 st.set_page_config(page_title="WissenGPT", page_icon="📖", layout="wide")
 st.header("📖WissenGPT")
 
