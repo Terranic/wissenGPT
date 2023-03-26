@@ -55,6 +55,9 @@ if uploaded_file is not None:
 
 query = st.text_area("Stell eine Frage zum Dokument", on_change=clear_submit)
 
+show_all_chunks = False
+show_full_doc = False
+
 """
 with st.expander("Extra-Optionen"):
     show_all_chunks = st.checkbox("Show all chunks retrieved from vector search")
