@@ -54,9 +54,12 @@ if uploaded_file is not None:
         st.error(e._message)
 
 query = st.text_area("Stell eine Frage zum Dokument", on_change=clear_submit)
+
+"""
 with st.expander("Extra-Optionen"):
     show_all_chunks = st.checkbox("Show all chunks retrieved from vector search")
     show_full_doc = st.checkbox("Show parsed contents of the document")
+"""
 
 if show_full_doc and doc:
     with st.expander("Dokument"):
